@@ -1,0 +1,303 @@
+html{
+	font-size: 15.5px;
+}
+
+
+body {
+	margin: 0;
+	font-family: Arial;
+	padding: 0;
+	line-height: 1.5rem;
+	overflow-x: hidden;
+}
+
+h1 {
+	font-size: clamp(0.8rem , 0.2rem + 3.4vw, 2.7rem);
+	color: #335384;
+	font-weight: 600;
+	line-height: 1.5em;
+	white-space: pre;
+}
+
+hr{
+	background-color: #335384;
+	width: 20%;
+	height: 2px;
+	margin-left: 0;
+	margin-bottom: 2em;
+	animation: slide 1.7s 1 forwards;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(420%);
+	opacity: 0.05;
+  }
+  to {
+    transform: translateX(0%);
+	opacity: 1;
+  }
+}
+
+strong{
+	font-size: 1.2rem;
+}
+
+h2, h3 {
+	letter-spacing: 0.2em;
+	white-space: pre;
+	font-weight: 550;
+}
+
+h2 {
+	font-size: clamp(0.6rem , 0.1rem + 3vw, 1.25rem);
+	line-height: 3em;
+}
+
+h3 {
+	font-size: 1.1rem;
+}
+
+.accent {
+	color: #5BA7D1;
+}
+
+p span {
+	color: #5c6773;
+}
+
+.col-bg {
+	background-color: #335384;
+	color: #EFF0F2;
+} 
+
+.col1 {
+	width: 28%;
+	padding: 2em 4em 7em 4em;
+}
+
+.col2 {
+	width: 60%;
+	padding: 2em 3.2em;
+}
+
+/* Layout */
+
+.container{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 990px;
+}
+
+.colgroup{
+	display: flex;
+	justify-content: space-between;
+}
+
+img{
+	width: 95%;
+	height: auto;
+	border-radius: 50%;
+	display: block;
+    margin: 0.5em auto;
+}
+
+ul{
+	padding: 0.5em 1em;
+	line-height: 1.8em;
+}
+
+.col2 ul{
+	padding: 0 0 1em 1.5em;
+}
+
+.col1 ul{
+	font-size: 0.9rem;
+	list-style-type: none;
+}
+
+.col1 ul li{
+	margin: 1.2em 0;
+}
+
+.col2 ul > li::marker {
+  font-weight: 900;
+}
+
+svg {
+	padding: 0.2em 0.8em 0.3em 0.2em;
+	display: inline-block;
+	vertical-align: middle;
+	float: left; 
+}
+
+.row1{
+	padding-top: 4.5em;
+}
+
+.contact {
+	margin-bottom: -15em;
+	margin-top: -6.5em;
+}
+
+.exp {
+	margin-top: -1.5em;
+}
+
+.skills {
+	margin-top: -19.5em;
+}
+
+.training {
+	margin-top: -1.5em;
+}
+
+.certs {
+	margin-top: -22.7em;
+}
+
+@media (max-width: 946px){	
+	html, body {
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.colgroup{
+		flex-direction: column;
+		width: 100%;
+	}
+	
+	.contact, .exp, .skills, .training, .certs, .row1{
+		margin: 0;
+		width: 100%;
+		padding: 2em 0;
+		max-width: 946px;
+	}	
+	
+	img{
+		width: 30%;
+		padding: 0;
+	}
+	
+	hr{
+		opacity: 0.05;
+		margin-left: 40%;
+		animation: rota 1.6s 1 forwards;
+	}
+	
+	body {
+		text-align: center;
+	}
+	
+	.container{
+		max-width: 946px;
+	}
+	
+	svg , ul > li::marker {
+		float: none; 	
+	}
+	
+	
+	svg {
+		padding: 0.1em 0.5em 0.15em 0em;
+	}
+	
+	.empty{
+		display: none;
+	}
+	
+	h1 {
+		font-size: clamp(1.55rem , 0.5rem + 4.4vw, 2.55rem);
+		line-height: 1em;
+	}
+	
+	h2 {
+		font-size: 1.1rem;
+		white-space: normal;
+		line-height: 1.5em;
+	}
+	
+	@keyframes rota {
+	  from {
+		transform: rotate(0deg);
+		opacity: 0.05;
+	  }
+	  to {
+		transform: rotate(360deg);
+		opacity: 1;
+	  }
+	}
+	
+	p {
+		width:88%;
+		margin: auto;
+	}
+	ul {
+		width:75%;
+		margin: auto;
+	}
+	
+	#ul1 {
+		line-height: 1.5em;
+		padding: 0.2em 1em;
+		opacity: 0;
+		transform: translateX(120%);
+	}
+	
+	.ul1 {
+		animation: slide 1.2s ease forwards;
+	}
+	@keyframes slide {
+		from {
+			transform: translateX(120%);
+			opacity: 0.3;
+		}
+		to {
+			transform: translateX(0%);
+			opacity: 1;
+		}
+	}
+	
+	#ul2 {
+		opacity: 0;
+		transform: translateX(-120%);
+	}
+	
+	.ul2 {
+		animation: slide2 1.2s ease forwards;
+	}
+	@keyframes slide2 {
+		from {
+			transform: translateX(-120%);
+			opacity: 0.3;
+		}
+		to {
+			transform: translateX(0%);
+			opacity: 1;
+		}
+	}
+	
+	#ul3 {
+		opacity: 0;
+		transform: translateY(120%);
+	}
+	
+	.ul3 {
+		animation: slide3 1.2s ease forwards;
+	}
+	@keyframes slide3 {
+		from {
+			transform: translateY(120%);
+			opacity: 0.3;
+		}
+		to {
+			transform: translateY(0%);
+			opacity: 1;
+		}
+	}
+
+	
+}
+
