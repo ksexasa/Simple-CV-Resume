@@ -5,10 +5,11 @@ html{
 
 body {
 	margin: 0;
-	font-family: Arial;
+	font-family: 'Inter', sans-serif;
 	padding: 0;
 	line-height: 1.5rem;
 	overflow-x: hidden;
+	letter-spacing: -0.4px;
 }
 
 h1 {
@@ -17,6 +18,7 @@ h1 {
 	font-weight: 600;
 	line-height: 1.5em;
 	white-space: pre;
+	margin-block-start: 16px;
 }
 
 hr{
@@ -73,7 +75,7 @@ p span {
 
 .col1 {
 	width: 28%;
-	padding: 2em 4em 7em 4em;
+	padding: 2rem 4rem 0px 4rem;
 }
 
 .col2 {
@@ -103,7 +105,7 @@ img{
 }
 
 ul{
-	padding: 0.5em 1em;
+	padding: 0.5rem 0rem 0.5rem 1rem;
 	line-height: 1.8em;
 }
 
@@ -132,29 +134,31 @@ svg {
 }
 
 .row1{
-	padding-top: 4.5em;
+	padding-top: 3rem;
 }
 
 .contact {
 	margin-bottom: -15em;
-	margin-top: -6.5em;
+	margin-top: -5rem;
 }
 
 .exp {
-	margin-top: -1.5em;
+	margin-top: -3rem;
 }
 
-.skills {
-	margin-top: -19.5em;
-}
-
-.training {
-	margin-top: -1.5em;
+.skills{
+	margin-top: -30.5rem;
 }
 
 .certs {
-	margin-top: -22.7em;
+	margin-top: -31.5rem;
 }
+
+.training {
+	margin-top: -2.5rem;
+}
+
+
 
 @media (max-width: 946px){	
 	html, body {
@@ -301,3 +305,68 @@ svg {
 	
 }
 
+@media print {
+	html{
+		width: 100%!important;
+	}
+	
+	#ul1 {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  #ul2 {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  #ul3 {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  hr {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+	
+  hr {
+    transform: none;
+    opacity: 1;
+    animation: none;
+  }
+  
+  .skills{
+		margin-top: -30.5rem;
+	}
+	
+	.certs {
+	margin-top: -26rem;
+}
+  
+  .ul1, .ul2, .ul3 {
+    transform: none;
+    opacity: 1;
+    animation: none;
+  }
+	
+  .colgroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .col1 {
+    width: 28%;
+    padding: 0.5rem 1rem 0px 1rem;
+  }
+  .col2 {
+    width: 60%;
+    padding: 0.5em 0.8em;
+  }
+  img {
+    width: 95%;
+  }
+  body {
+    text-align: left;
+  }
+  svg {
+    float: left;
+  }
+}
