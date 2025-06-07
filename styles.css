@@ -45,18 +45,19 @@ strong{
 	font-size: 1.2rem;
 }
 
-h2, h3 {
-	letter-spacing: 0.2em;
-	white-space: pre;
+h2, h3 {	
+	white-space: nowrap;
 	font-weight: 550;
 }
 
 h2 {
+	letter-spacing: 0.2rem;
 	font-size: clamp(0.6rem , 0.1rem + 3vw, 1.25rem);
 	line-height: 3em;
 }
 
 h3 {
+	letter-spacing: 0.2rem;
 	font-size: 1.1rem;
 }
 
@@ -218,6 +219,7 @@ svg {
 	}
 	
 	h2 {
+		letter-spacing: 1.4rem;
 		font-size: 1.1rem;
 		white-space: normal;
 		line-height: 1.5em;
@@ -369,4 +371,20 @@ svg {
   svg {
     float: left;
   }
+  
+  h2, h3 {	
+		white-space: nowrap;
+		font-weight: 550;
+	}
+
+	h2 {
+		letter-spacing: 0.2rem;
+		font-size: clamp(0.6rem , 0.1rem + 3vw, 1.25rem);
+		line-height: 3em;
+	}
+
+	h3 {
+		letter-spacing: 0.2rem;
+		font-size: 1.1rem;
+	}
 }
