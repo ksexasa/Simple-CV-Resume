@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-VariableFont.ttf') format('truetype');
+    font-weight: 100 900;    /* Variable range: covers thin to black */
+    font-style: normal;
+    font-display: swap;      /* Improves loading performance */
+}
+
 html{
 	font-size: 15.5px;
 }
@@ -26,7 +34,7 @@ hr{
 	width: 20%;
 	height: 2px;
 	margin-left: 0;
-	margin-bottom: 2em;
+	margin-bottom: 1rem;
 	animation: slide 1.7s 1 forwards;
 }
 
@@ -54,6 +62,7 @@ h2 {
 	letter-spacing: 0.2rem;
 	font-size: clamp(0.6rem , 0.1rem + 3vw, 1.25rem);
 	line-height: 3em;
+	margin-block: 0px;
 }
 
 h3 {
@@ -75,13 +84,17 @@ p span {
 } 
 
 .col1 {
-	width: 28%;
-	padding: 2rem 4rem 0px 4rem;
+	width: 25%;
+	padding: 2rem 3rem 0px 3rem;
 }
 
 .col2 {
-	width: 60%;
+	width: 63%;
 	padding: 2em 3.2em;
+}
+
+.col2.row1 p {
+	margin-block-start: 5px;
 }
 
 /* Layout */
@@ -102,7 +115,10 @@ img{
 	height: auto;
 	border-radius: 50%;
 	display: block;
-    margin: 0.5em auto;
+    margin: 0px auto;
+	aspect-ratio: 1 / 1;
+    object-fit: cover;
+	object-position: top center;
 }
 
 ul{
@@ -110,13 +126,20 @@ ul{
 	line-height: 1.8em;
 }
 
+#ul2 li svg , #ul3 li svg{
+	padding-bottom: 0px;
+	margin-top: 3px;
+}
+
+
 .col2 ul{
-	padding: 0 0 1em 1.5em;
+	padding: 0 0 0 1.5em;
 }
 
 .col1 ul{
 	font-size: 0.9rem;
 	list-style-type: none;
+	padding-left: 0.6rem;
 }
 
 .col1 ul li{
@@ -135,28 +158,40 @@ svg {
 }
 
 .row1{
+	padding-top: 2.5rem;
+}
+
+.row1.col1{
 	padding-top: 3rem;
 }
 
 .contact {
 	margin-bottom: -15em;
-	margin-top: -5rem;
+	margin-top: -3rem;
 }
 
 .exp {
 	margin-top: -3rem;
 }
 
+.exp p, .training p{
+	margin-block-end: 0px;
+}
+
+.exp ul, .training ul{
+	margin-block-start: 5px;
+}
+
 .skills{
-	margin-top: -30.5rem;
+	margin-top: -25rem;
 }
 
 .certs {
-	margin-top: -31.5rem;
+	margin-top: -25.4rem;
 }
 
 .training {
-	margin-top: -2.5rem;
+	margin-top: -3.5rem;
 }
 
 
@@ -200,10 +235,27 @@ svg {
 		max-width: 946px;
 	}
 	
+	.col2.training ul {
+		list-style-type: none;
+	}
+
+	.col2.training ul li {
+		list-style-type: none;
+	}
+	
+	.col2 ul{
+		padding: 0 0 2em 1.5em;
+	}
+
+	
 	svg , ul > li::marker {
 		float: none; 	
 	}
 	
+	#ul2 li svg{
+		padding-bottom: 3px;
+		margin-top: 0px;
+	}
 	
 	svg {
 		padding: 0.1em 0.5em 0.15em 0em;
@@ -313,24 +365,25 @@ svg {
 @media print {
 	html{
 		width: 100%!important;
+		zoom: 90%;
 	}
 	
 	#ul1 {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  #ul2 {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  #ul3 {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  hr {
-    transform: translateX(0%);
-    opacity: 1;
-  }
+		transform: translateX(0%);
+		opacity: 1;
+	  }
+	  #ul2 {
+		transform: translateX(0%);
+		opacity: 1;
+	  }
+	  #ul3 {
+		transform: translateY(0%);
+		opacity: 1;
+	  }
+	  hr {
+		transform: translateX(0%);
+		opacity: 1;
+	  }
 	
   hr {
     transform: none;
@@ -338,19 +391,59 @@ svg {
     animation: none;
   }
   
-  .skills{
-		margin-top: -30.5rem;
-	}
-	
-	.certs {
-	margin-top: -26rem;
+  .contact{
+	  padding-top: 1rem;
+  }
+  
+  
+  .exp {
+	margin-top: 0rem;
 }
   
-  .ul1, .ul2, .ul3 {
-    transform: none;
+  img{
+	width: 80%!important;
+	height: auto;
+	border-radius: 50%;
+	display: block;
+    margin: 0px auto;
+	aspect-ratio: 1 / 1;
+	padding-bottom:5px;
+}
+  
+	.skills{
+		margin-top: -22rem!important;
+	}
+	.skills svg{
+		display:none;
+	}
+
+	.certs {
+		margin-top: -23rem!important;
+		padding-bottom: 3rem;
+		box-shadow: 0px 100px 0px #335384;
+}		
+  
+  .training {
+	margin-top: 0rem;
+}
+
+
+.col2.training ul {
+		list-style-type: unset;
+	}
+
+	.col2.training ul li {
+		list-style-type: unset;
+	}
+
+  .col1 ul{
+	font-size: 0.9rem;
+	list-style-type: none;
+	padding-left: 0px!important;
+	transform: none;
     opacity: 1;
     animation: none;
-  }
+}
 	
   .colgroup {
     display: flex;
@@ -359,12 +452,23 @@ svg {
   }
   .col1 {
     width: 28%;
-    padding: 0.5rem 1rem 0px 1rem;
+    padding: 0.3rem 1rem 0 2rem;
+	background-color: #335384;
+	color: #EFF0F2;
+	overflow-x: hidden;
   }
+  
+
+  
   .col2 {
-    width: 60%;
-    padding: 0.5em 0.8em;
+    width: 63%;
+    padding: 1rem 0 0 2rem!important;
   }
+	
+  .col2 ul{
+	padding: 0 0 0 1em;
+}
+  
   img {
     width: 95%;
   }
